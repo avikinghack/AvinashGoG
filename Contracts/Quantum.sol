@@ -1,14 +1,4 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-/**
- * @title QuantumDapp
- * @dev A decentralized quantum-resistant data storage and verification system
- * @notice This contract allows users to store quantum-secured data hashes with timestamps
- */
-contract QuantumDapp {
-    
-    // Struct to store quantum data entries
+Struct to store quantum data entries
     struct QuantumData {
         bytes32 dataHash;
         uint256 timestamp;
@@ -17,16 +7,10 @@ contract QuantumDapp {
         string metadata;
     }
     
-    // Mapping from data ID to QuantumData
-    mapping(uint256 => QuantumData) public quantumRecords;
-    
-    // Mapping to track user's data entries
+    Mapping to track user's data entries
     mapping(address => uint256[]) public userRecords;
     
-    // Counter for data entries
-    uint256 public recordCount;
-    
-    // Events
+    Events
     event DataStored(uint256 indexed recordId, address indexed owner, bytes32 dataHash, uint256 timestamp);
     event DataVerified(uint256 indexed recordId, address indexed verifier, uint256 timestamp);
     event DataUpdated(uint256 indexed recordId, string newMetadata, uint256 timestamp);
@@ -126,3 +110,6 @@ contract QuantumDapp {
         );
     }
 }
+// 
+update
+// 
